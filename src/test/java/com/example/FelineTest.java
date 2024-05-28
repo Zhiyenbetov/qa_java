@@ -24,7 +24,7 @@ public class FelineTest {
 
     @Test(expected = Exception.class)
     public void eatMeatExceptionTest() throws Exception {
-        List<String> actual = felineSpy.getFood("Трава");
+        felineSpy.getFood("Трава");
     }
 
     @Test
