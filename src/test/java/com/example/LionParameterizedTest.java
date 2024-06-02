@@ -13,8 +13,6 @@ public class LionParameterizedTest {
     String sex;
     boolean expectedHasMane;
 
-    @Mock
-    Feline feline;
 
     public LionParameterizedTest(String sex, boolean hasMane){
         this.sex = sex;
