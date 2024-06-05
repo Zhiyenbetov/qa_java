@@ -3,7 +3,6 @@ package com.example;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mock;
 
 import static org.junit.Assert.*;
 
@@ -18,6 +17,7 @@ public class LionParameterizedTest {
         this.sex = sex;
         this.expectedHasMane = hasMane;
     }
+
     @Parameterized.Parameters
     public static Object[] LionSex() {
         return new Object[][]{
@@ -27,7 +27,7 @@ public class LionParameterizedTest {
     }
     @Test
     public void hasManeTest() throws Exception {
-        Lion lion = new Lion(sex);
+        Lion lion = new Lion(new Feline(), sex);
         assertEquals(lion.doesHaveMane(), expectedHasMane);
     }
 
